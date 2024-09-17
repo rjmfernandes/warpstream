@@ -6,7 +6,7 @@
 
 ## HelloWorld
 
-For local binaries install and [basic playing](./HelloWorld.md).
+For local binaries install and [basic playing](HelloWorld.md).
 
 ## Minio
 
