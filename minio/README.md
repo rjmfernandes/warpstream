@@ -46,12 +46,22 @@ You should see a small peak of about 1 bytes/s on WarpStream for the throughput.
 
 Check your MinIO (http://localhost:9090 with user/password being `admin`/`password`) and for your bucket `warpstream-minio-bucket` you should see your data.
 
+Consume:
+
+```shell
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning --property print.timestamp=true --property print.key=true --property print.value=true
+```
+
+If you click on the topic in WarpStream interface you should be able to see the max offset per partition.
+
 ## Clean up
 
 ```shell
 docker compose down -v
 rm -fr ./data
 ```
+
+Delete your cluster in WarpStream.
 
 
 
